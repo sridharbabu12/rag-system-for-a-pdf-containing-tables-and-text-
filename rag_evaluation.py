@@ -71,33 +71,3 @@ results = evaluate(
     metrics=[faithfulness, answer_relevancy]
 )
 print(results)
-
-"""contexts=[]
-for query in questions:
-        result=await ragfusion_chain.ainvoke({"question":query},return_only_outputs=True)
-        context=[]
-        for doc in result:
-                context.append(doc[0].page_content)
-        contexts.append(context)
-
-answer=[]
-for query in questions:
-    result=await full_rag_fusion_chain.ainvoke({"question": query},return_only_outputs=True)
-    answer.append(result)
-    
-data = {
-    "question": questions,
-    "answer": answer,
-    "contexts": contexts,
-    "ground_truths": ground_truths
-}
-
-dataset=Dataset.from_dict(data)
-
-results=evaluate(
-    dataset=dataset,
-    metrics=[faithfulness,
-    answer_relevancy,
-    ]
-)
-print(results)"""
