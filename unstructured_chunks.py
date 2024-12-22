@@ -45,14 +45,14 @@ def clean_text(text):
     cleaned_text = re.sub(r'\n+', ' ', text)  # Replace multiple newlines with a single space
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text)  # Replace multiple spaces with one
 
-    # Step 3: Normalize quotation marks to standard double quotes (optional)
+    # Step 2: Normalize quotation marks to standard double quotes (optional)
     cleaned_text = cleaned_text.replace('“', '"').replace('”', '"')
 
-    # Step 4: Standardize punctuation (remove spaces before punctuation marks)
+    # Step 3: Standardize punctuation (remove spaces before punctuation marks)
     cleaned_text = re.sub(r'(\s)([.,!?])', r'\2', cleaned_text)  # Remove space before punctuation marks
     
     cleaned_text=cleaned_text.replace(']',"")
-    # Step 5: Ensure no trailing or leading spaces are present
+    # Step 4: Ensure no trailing or leading spaces are present
     return cleaned_text.strip()
 
 documents_for_embedding1=[]
