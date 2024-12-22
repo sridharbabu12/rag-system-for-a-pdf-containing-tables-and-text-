@@ -45,9 +45,6 @@ def clean_text(text):
     cleaned_text = re.sub(r'\n+', ' ', text)  # Replace multiple newlines with a single space
     cleaned_text = re.sub(r'\s+', ' ', cleaned_text)  # Replace multiple spaces with one
 
-    # Step 2: Remove duplicate company information (e.g., repeating addresses, VAT numbers)
-    cleaned_text = re.sub(r'(Registered offices:.*?VAT Registration number: IT04619241005)(.*?)(Registered offices:.*?VAT Registration number: IT04619241005)', r'\1', cleaned_text)
-
     # Step 3: Normalize quotation marks to standard double quotes (optional)
     cleaned_text = cleaned_text.replace('“', '"').replace('”', '"')
 
