@@ -1,0 +1,11 @@
+langchain
+openai
+pinecone-client
+unstructured
+pymupdf
+rich
+python-dotenv
+ragas
+datasets
+pinecone-text
+langchain-community 
